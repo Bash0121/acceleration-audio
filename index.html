@@ -7,43 +7,59 @@
 
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body>
-    <h1>Acceleration Audio</h1>
+  <body class="bg-black text-white">
+    <h1 class="text-6xl text-center m-10">Acceleration Audio</h1>
 
-    <i data-lucide="x"></i>
-    <i data-lucide="menu"></i>
+    <div id="albumArt">
+      <div class="grid grid-cols-4 gap-10 w-[55%] mx-auto" id="imagesTop">
+        <img src="albumart/Aidan.jpg" data-art="Aidan.jpg" name="Aiden" class="rounded-4xl border-8 border-yellow-400">
+        <img src="albumart/autumn_sun.png" data-art="autumn_sun.png" name="Autumn Sun" class="rounded-4xl">
+        <img src="albumart/BestPart.jpg" data-art="BestPart.jpg" name="Best Part" class="rounded-4xl">
+        <img src="albumart/Better Days.jpg" data-art="Better Days.jpg" name="Best Part" class="rounded-4xl">
+      </div>
+
+      <div class="grid grid-cols-4 gap-10 w-[55%] mx-auto m-5" id="imagesBottom">
+        <img src="albumart/i_cant_make_you_love_me_cover.jpeg" data-art="i_cant_make_you_love_me_cover.jpeg" name="I Cant Make You Love Me" class="rounded-4xl">
+        <img src="albumart/justRelax_img.jpeg" data-art="justRelax_img.jpeg" name="Just Relax"class="rounded-4xl">
+        <img src="albumart/paranormal_real_500.jpg" data-art="paranormal_real_500.jpg" name="Paranormal" class="rounded-4xl">
+        <img src="albumart/Polarity.jpg" data-art="Polarity.jpg" name="Polarity" class="rounded-4xl">
+      </div>
+    </div>
+
+  <div class="flex justify-center">
+
+    <div class="mx-20 mt-10">
+      <p id="currentSpeed"> Current Speed: 1.0</p>
+    </div>
+
+    <button id="prevButton">
+      <i data-lucide="skip-back" class="w-25 h-25"></i>
+    </button>
 
     <button id="playButton">
-      <i data-lucide="play" class="w-50 h-50"></i>
+      <i data-lucide="play" class="w-25 h-25"></i>
     </button>
 
-    <a href="">
-      <i data-lucide="play" class="text-transparent fill-amber-600"></i>
-    </a>
-
-    <a href="">
-      <i data-lucide="play" class="text-amber-600 fill-transparent"></i>
-    </a>
-
-    <!-- <div class="icon-play"></div> -->
-    <button id="pauseButton">
-      <i data-lucide="pause" class="text-transparent fill-amber-600 w-50 h-60">
-      </i>
+    <button id="pauseButton" class="hidden">
+      <i data-lucide="pause" class="w-25 h-25"> </i>
     </button>
 
-    <button id="pauseButton2">
-      <i data-lucide="pause" class="text-amber-600 fill-transparent"> </i>
+    <button id="nextButton">
+      <i data-lucide="skip-forward" class="w-25 h-25"></i>
     </button>
 
-    <p>
-      <progress id="progress" value="0" max="1" style="width:100%"></progress>
+    <div class="mx-20 mt-10">
+      <p id="songName"> Current Song: Aiden</p>
+    </div>
+  </div>
 
-      <div id="custom-progress" class="w-full h-8 bg-amber-100 trasition-all">
-        <div id="custom-progress-bar" class="w-0 h-8 bg-amber-500 z-10"></div>
-      </div>
-    </p>
+    <p class="text-center p-5">
+      <progress id="progress" value="0" max="1" style="visibility:hidden"></progress>
 
-    <audio src="" id="audioPlayer" controls></audio>
+      <div id="custom-progress" class="w-[60%] h-3 trasition-all rounded-2xl bg-white mx-auto">
+      <div id="custom-progress-bar" class="w-0 h-3 z-10 rounded-2xl bg-yellow-400"></div>
+    </p>  
+    <audio src="songs/Aidan.mp3" id="audioPlayer"></audio>
 
     <script src="main.js"></script>
 

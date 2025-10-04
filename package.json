@@ -10,8 +10,8 @@
     "insult": "echo \"Your mama\""
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.13",
+    "@tailwindcss/cli": "^4.1.14",
     "lucide": "^0.544.0",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.14"
   }
 }
